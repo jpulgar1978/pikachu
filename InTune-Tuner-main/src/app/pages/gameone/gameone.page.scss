@@ -1,0 +1,64 @@
+.notaUno{
+    position: relative;
+    top: 20px;
+    left: 27%;
+  }
+
+.notaDos{
+  position: relative;
+  top: 20px;
+  left: 44%;
+}
+
+.notaTres{
+  position: relative;
+  top: 20px;
+  left: 61%;
+}
+
+.notaCuatro{
+position: relative;
+top: 20px;
+left: 78%;
+}
+
+.lineafinal{
+  position: relative;
+  top: 50px;
+
+  }
+
+  .linea {
+    border-top: 10px solid white;
+    height: 200px;
+    padding: 0;
+    margin: 330px auto 0 auto;
+  }
+
+.v-line1{
+  border-left: thick solid #000;
+  height:60%;
+  left: 27%;
+  position: absolute;
+ }
+
+ .v-line2{
+  border-left: thick solid #000;
+  height:60%;
+  left: 44%;
+  position: absolute;
+ }
+
+ .v-line3{
+  border-left: thick solid #000;
+  height:60%;
+  left: 61%;
+  position: absolute;
+ }
+
+ .v-line4{
+  border-left: thick solid #000;
+  height:60%;
+  left: 78%;
+  position: absolute;
+ }

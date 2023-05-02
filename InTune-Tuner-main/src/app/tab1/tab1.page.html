@@ -1,0 +1,31 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar mode="md">
+    <ion-title>
+      TUNER
+    </ion-title>
+  </ion-toolbar>
+  <ion-segment mode="md" value="default">
+    <ion-segment-button value="default" (click)="switchTo('guitar')">
+      <ion-icon [src]="guitarIcon"></ion-icon>
+      <ion-label>GUITAR</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment" (click)="switchTo('bass')">
+      <ion-icon [src]="bassIcon"></ion-icon>
+      <ion-label>BASS</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="background" class="background-image" style="background-image: url('../../assets/wave-background.gif')"></div>
+  <div id="text-section" class="container">
+    <ion-label color="dark" class="note">{{ noteName }}</ion-label>
+    <ion-label class="note-warning" disabled>{{ displayFrequency }} HZ</ion-label>
+    <ion-label *ngIf="hasStarted" [color]="advice === 'Hold there' && 'success' || (advice === 'Tune Down' && 'danger' || 'warning')">{{ advice }}</ion-label>
+    <ion-icon id="state" *ngIf="hasStarted && advice" [name]="advice === 'Hold there' && 'happy' || (advice === 'Tune Down' && 'chevron-down' || 'chevron-up')" [color]="advice === 'Hold there' && 'success' || (advice === 'Tune Down' && 'danger' || 'warning')"></ion-icon>
+    <ion-label color="dark" class="note-warning" [hidden]="hasStarted">Press to start.</ion-label>
+  </div>
+  <ion-chip id="start-button" color="dark" [color]="hasStarted && 'success' || 'dark'" [outline]="true">
+    <ion-icon color="dark" [color]="hasStarted && 'success' || 'dark'" [src]="guitarIcon" (click)="registerInput()"></ion-icon>
+  </ion-chip>
+</ion-content>

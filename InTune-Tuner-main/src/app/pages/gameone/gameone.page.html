@@ -1,0 +1,24 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar mode="md">
+    <ion-title>{{idNota}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="notaUno" id="cuerda_uno"></div>
+  <div class="notaDos" id="cuerda_dos"></div>
+  <div class="notaTres" id="cuerda_tres"></div>
+  <div class="notaCuatro" id="cuerda_cuatro"></div>
+  <div class="v-line1"></div>
+  <div class="v-line2"></div>
+  <div class="v-line3"></div>
+  <div class="v-line4"></div>
+  <img src="../../../assets/juegouno/fondomadera.jpg" alt="">
+
+  <div>
+    <ion-button  class="btnjugar" (click) = "iniciaJuego()"  expand="block">Jugar!</ion-button>
+    
+  </div>
+</ion-content>
+
+
